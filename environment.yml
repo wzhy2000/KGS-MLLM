@@ -1,0 +1,11 @@
+name: kgs_mllm
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11.7
+  - requests>=2.31.0
+  - pandas>=2.1.0
+  - openpyxl>=3.0.10
+  - pillow>=10.0.0
+  - numpy>=1.24.0
