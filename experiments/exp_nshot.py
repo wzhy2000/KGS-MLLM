@@ -62,7 +62,7 @@ def run_nshot_pipeline(batch_size: int = 4):
             llm.add_feedback_examples(fb_scores, fb_dir)
             logger.info(f"已将 data{stage} 加入上下文，当前升级为 {n_shot}-shot")
 
-        out_excel_path = os.path.join(result_root, f"test_data6_stage{stage}_{n_shot}shot.xlsx")
+        out_excel_path = os.path.join(result_root, f"test_data6_{stage}.xlsx")
         
         # Break point and continue running
         if os.path.exists(out_excel_path) and len(pd.read_excel(out_excel_path)) >= len(test_images):
@@ -83,7 +83,6 @@ def run_nshot_pipeline(batch_size: int = 4):
             if parsed:
                 for item, ident in zip(parsed, identifiers):
                     all_results.append({
-                        "n_shot": n_shot,
                         "image": item.get("image", ident),
                         "model_output": item.get("reason", ""),
                         "score": extract_score(item.get("score", ""), task_cfg["regex"]),
@@ -92,7 +91,6 @@ def run_nshot_pipeline(batch_size: int = 4):
             else:
                 for ident in identifiers:
                     all_results.append({
-                        "n_shot": n_shot, 
                         "image": ident, 
                         "model_output": "PARSE_ERROR", 
                         "score": "", 

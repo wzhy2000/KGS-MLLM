@@ -53,8 +53,14 @@ def run_and_save_stage(llm, test_images, batch_size, group_id, stage, result_roo
         start_time = time.time()
         
         identifiers = [os.path.basename(p) for p in batch]
-        model_text = llm.request_batch_assessment(batch, task_cfg["score_range"], identifiers)
+        model_text, raw_response = llm.request_batch_assessment(
+            batch,
+            task_cfg["score_range"],
+            identifiers,
+            return_raw=True,
+        )
         elapsed = time.time() - start_time
+        tokens = extract_total_tokens(raw_response)
 
         parsed = safe_json_parse(model_text)
         if parsed:
@@ -64,13 +70,30 @@ def run_and_save_stage(llm, test_images, batch_size, group_id, stage, result_roo
                     "image": f"data{group_id}_{os.path.basename(orig_path)}",
                     "model_output": item.get("reason", ""),
                     "score": extract_score(item.get("score", ""), task_cfg["regex"]),
-                    "response_time": elapsed / len(parsed)
+                    "response_time": elapsed / len(parsed),
+                    "tokens": tokens
                 })
         else:
-            results.append({"stage": stage, "image": "BATCH", "score": ""})
+            results.append({
+                "stage": stage,
+                "image": "BATCH",
+                "model_output": "PARSE_ERROR",
+                "score": "",
+                "response_time": elapsed / len(batch),
+                "tokens": tokens
+            })
             
-    out_path = os.path.join(result_root, f"re_fixed{group_id}_stage{stage}.xlsx")
+    out_path = os.path.join(result_root, f"cv_fixed{group_id}_stage{stage}.xlsx")
     pd.DataFrame(results).to_excel(out_path, index=False)
+
+def extract_total_tokens(raw_response: str):
+    if not raw_response:
+        return ""
+    try:
+        usage = json.loads(raw_response).get("usage", {})
+    except Exception:
+        return ""
+    return usage.get("total_tokens") or usage.get("completion_tokens") or ""
 
 if __name__ == "__main__":
     run_cv_pipeline()
