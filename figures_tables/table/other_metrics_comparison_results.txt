@@ -1,0 +1,41 @@
+Performance metric                     Comparison  Samples        Model A        Model B Mean difference (%) 95% CI lower (%) 95% CI upper (%) Bootstrap p value
+   Specificity (%)    KGS-Gemini 3 vs KGS-GPT 5.2     2700   KGS-Gemini 3    KGS-GPT 5.2                6.69             5.88             7.48        <0.0005***
+   Specificity (%) KGS-Gemini 3 vs KGS-Claude 4.5     2700   KGS-Gemini 3 KGS-Claude 4.5                4.83             4.08             5.58        <0.0005***
+   Specificity (%)     KGS-Gemini 3 vs KGS-Grok 4     2700   KGS-Gemini 3     KGS-Grok 4                9.41             8.60            10.24        <0.0005***
+   Specificity (%)          KGS-Gemini 3 vs DLKGs     2700   KGS-Gemini 3          DLKGs                2.81             2.11             3.49        <0.0005***
+   Specificity (%)  KGS-GPT 5.2 vs KGS-Claude 4.5     2700    KGS-GPT 5.2 KGS-Claude 4.5               -1.86            -2.75            -0.96        <0.0005***
+   Specificity (%)      KGS-GPT 5.2 vs KGS-Grok 4     2700    KGS-GPT 5.2     KGS-Grok 4                2.72             1.83             3.66        <0.0005***
+   Specificity (%)           KGS-GPT 5.2 vs DLKGs     2700    KGS-GPT 5.2          DLKGs               -3.88            -4.76            -3.01        <0.0005***
+   Specificity (%)   KGS-Claude 4.5 vs KGS-Grok 4     2700 KGS-Claude 4.5     KGS-Grok 4                4.58             3.66             5.54        <0.0005***
+   Specificity (%)        KGS-Claude 4.5 vs DLKGs     2700 KGS-Claude 4.5          DLKGs               -2.02            -2.82            -1.22        <0.0005***
+   Specificity (%)            KGS-Grok 4 vs DLKGs     2700     KGS-Grok 4          DLKGs               -6.60            -7.50            -5.74        <0.0005***
+     Precision (%)    KGS-Gemini 3 vs KGS-GPT 5.2     2700   KGS-Gemini 3    KGS-GPT 5.2               16.91            14.94            18.80        <0.0005***
+     Precision (%) KGS-Gemini 3 vs KGS-Claude 4.5     2700   KGS-Gemini 3 KGS-Claude 4.5               10.87             9.00            12.70        <0.0005***
+     Precision (%)     KGS-Gemini 3 vs KGS-Grok 4     2700   KGS-Gemini 3     KGS-Grok 4               22.45            20.43            24.50        <0.0005***
+     Precision (%)          KGS-Gemini 3 vs DLKGs     2700   KGS-Gemini 3          DLKGs                4.30             2.54             6.07        <0.0005***
+     Precision (%)  KGS-GPT 5.2 vs KGS-Claude 4.5     2700    KGS-GPT 5.2 KGS-Claude 4.5               -6.04            -8.17            -3.95        <0.0005***
+     Precision (%)      KGS-GPT 5.2 vs KGS-Grok 4     2700    KGS-GPT 5.2     KGS-Grok 4                5.53             3.37             7.84        <0.0005***
+     Precision (%)           KGS-GPT 5.2 vs DLKGs     2700    KGS-GPT 5.2          DLKGs              -12.61           -14.70           -10.51        <0.0005***
+     Precision (%)   KGS-Claude 4.5 vs KGS-Grok 4     2700 KGS-Claude 4.5     KGS-Grok 4               11.57             9.39            13.87        <0.0005***
+     Precision (%)        KGS-Claude 4.5 vs DLKGs     2700 KGS-Claude 4.5          DLKGs               -6.57            -8.46            -4.55        <0.0005***
+     Precision (%)            KGS-Grok 4 vs DLKGs     2700     KGS-Grok 4          DLKGs              -18.14           -20.23           -15.90        <0.0005***
+        Recall (%)    KGS-Gemini 3 vs KGS-GPT 5.2     2700   KGS-Gemini 3    KGS-GPT 5.2               17.33            15.42            19.15        <0.0005***
+        Recall (%) KGS-Gemini 3 vs KGS-Claude 4.5     2700   KGS-Gemini 3 KGS-Claude 4.5               11.59             9.75            13.43        <0.0005***
+        Recall (%)     KGS-Gemini 3 vs KGS-Grok 4     2700   KGS-Gemini 3     KGS-Grok 4               23.41            21.43            25.45        <0.0005***
+        Recall (%)          KGS-Gemini 3 vs DLKGs     2700   KGS-Gemini 3          DLKGs                6.48             4.74             8.20        <0.0005***
+        Recall (%)  KGS-GPT 5.2 vs KGS-Claude 4.5     2700    KGS-GPT 5.2 KGS-Claude 4.5               -5.74            -7.85            -3.64        <0.0005***
+        Recall (%)      KGS-GPT 5.2 vs KGS-Grok 4     2700    KGS-GPT 5.2     KGS-Grok 4                6.07             3.90             8.24        <0.0005***
+        Recall (%)           KGS-GPT 5.2 vs DLKGs     2700    KGS-GPT 5.2          DLKGs              -10.85           -12.91            -8.77        <0.0005***
+        Recall (%)   KGS-Claude 4.5 vs KGS-Grok 4     2700 KGS-Claude 4.5     KGS-Grok 4               11.81             9.59            14.02        <0.0005***
+        Recall (%)        KGS-Claude 4.5 vs DLKGs     2700 KGS-Claude 4.5          DLKGs               -5.11            -7.06            -3.21        <0.0005***
+        Recall (%)            KGS-Grok 4 vs DLKGs     2700     KGS-Grok 4          DLKGs              -16.93           -18.96           -14.86        <0.0005***
+             F1(%)    KGS-Gemini 3 vs KGS-GPT 5.2     2700   KGS-Gemini 3    KGS-GPT 5.2               17.28            15.30            19.20        <0.0005***
+             F1(%) KGS-Gemini 3 vs KGS-Claude 4.5     2700   KGS-Gemini 3 KGS-Claude 4.5               11.79             9.85            13.73        <0.0005***
+             F1(%)     KGS-Gemini 3 vs KGS-Grok 4     2700   KGS-Gemini 3     KGS-Grok 4               23.58            21.59            25.69        <0.0005***
+             F1(%)          KGS-Gemini 3 vs DLKGs     2700   KGS-Gemini 3          DLKGs                7.12             5.22             9.03        <0.0005***
+             F1(%)  KGS-GPT 5.2 vs KGS-Claude 4.5     2700    KGS-GPT 5.2 KGS-Claude 4.5               -5.50            -7.62            -3.30        <0.0005***
+             F1(%)      KGS-GPT 5.2 vs KGS-Grok 4     2700    KGS-GPT 5.2     KGS-Grok 4                6.30             4.11             8.53        <0.0005***
+             F1(%)           KGS-GPT 5.2 vs DLKGs     2700    KGS-GPT 5.2          DLKGs              -10.17           -12.39            -8.00        <0.0005***
+             F1(%)   KGS-Claude 4.5 vs KGS-Grok 4     2700 KGS-Claude 4.5     KGS-Grok 4               11.80             9.59            14.12        <0.0005***
+             F1(%)        KGS-Claude 4.5 vs DLKGs     2700 KGS-Claude 4.5          DLKGs               -4.67            -6.74            -2.69        <0.0005***
+             F1(%)            KGS-Grok 4 vs DLKGs     2700     KGS-Grok 4          DLKGs              -16.47           -18.72           -14.24        <0.0005***

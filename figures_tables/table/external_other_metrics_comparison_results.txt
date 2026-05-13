@@ -1,0 +1,5 @@
+Performance metric            Comparison  Samples      Model A Model B Mean difference (%) 95% CI lower (%) 95% CI upper (%) Bootstrap p value
+   Specificity (%) KGS-Gemini 3 vs DLKGs     2218 KGS-Gemini 3   DLKGs              1.3950           0.4037           2.3119           0.003**
+     Precision (%) KGS-Gemini 3 vs DLKGs     2218 KGS-Gemini 3   DLKGs             -1.5452          -4.3251           1.1194             0.253
+        Recall (%) KGS-Gemini 3 vs DLKGs     2218 KGS-Gemini 3   DLKGs              2.6994           0.0064           5.2215             0.05*
+             F1(%) KGS-Gemini 3 vs DLKGs     2218 KGS-Gemini 3   DLKGs             -0.4713          -3.3096           2.3311             0.704
