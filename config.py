@@ -1,7 +1,7 @@
 import os
 
 # ========== Model and API configuration ==========
-DEFAULT_MODEL = 'gemini-3-pro-preview'                                              #gpt-5.2-chat-latest, claude-opus-4-5-20251101-thinking, grok-4-0709
+DEFAULT_MODEL = 'gpt-5.2-chat-latest'                                              #gpt-5.2-chat-latest, claude-opus-4-5-20251101-thinking, grok-4-0709
 DEFAULT_TEMPERATURE = 0.0
 DEFAULT_TOP_P = 0.0
 DEFAULT_MAX_TOKENS = 4096
